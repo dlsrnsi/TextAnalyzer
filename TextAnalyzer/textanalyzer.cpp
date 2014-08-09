@@ -7,6 +7,8 @@ TextAnalyzer::TextAnalyzer(QWidget *parent)
 	connect(ui.open, SIGNAL(triggered()), this, SLOT(openFile()));
 	connect(ui.doAnalyze, SIGNAL(clicked()), this, SLOT(makeAnalyze()));
 	connect(ui.open, SIGNAL(triggered()), ui.doAnalyze, SLOT(setEnabled(true)));
+	ui.tableWidget->setColumnCount(3);
+	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << tr("Number") << tr("Morph") << tr("Pos"));
 }
 void TextAnalyzer::newFile(){
 	
@@ -29,16 +31,8 @@ bool TextAnalyzer::saveAsFile(){
 	return true;
 }
 void TextAnalyzer::makeAnalyze(){
-	if (!analyzeClass == NULL){
-		cout << "이전 텍스트 지움" << endl;
-		analyzeClass->~Analyze();
-	}
 	cout << "새 텍스트" << endl;
-	analyzeClass = new Analyze(fileName.toLocal8Bit().data());
-	wordModel.setWordModel(analyzeClass->returnResult());
-	ui.tableView->setModel(&wordModel);
-	cout << "테이블 만들음" << endl;
-	
+	analyzeClass = new Analyze(fileName.toLocal8Bit().data(), *ui.tableWidget);
 }
 
 TextAnalyzer::~TextAnalyzer()

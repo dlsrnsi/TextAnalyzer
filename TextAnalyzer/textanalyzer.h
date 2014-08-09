@@ -9,18 +9,19 @@
 #include "qfile.h"
 #include "qiodevice.h"
 #include "src\analyze.h"
-#include "src\wordModel.h"
+#include "src\morph.h"
+#include "qlist.h"
 
 class TextAnalyzer : public QMainWindow
 {
 	Q_OBJECT
 
 public:
-	WordModel wordModel;
 	QString fileName;
 	Analyze *analyzeClass;
 	TextAnalyzer(QWidget *parent = 0);
 	~TextAnalyzer();
+	QList<Morph> morphList;
 
 private:
 	Ui::TextAnalyzerClass ui;

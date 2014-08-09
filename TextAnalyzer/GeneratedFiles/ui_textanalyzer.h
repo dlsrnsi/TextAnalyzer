@@ -20,7 +20,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -38,7 +38,7 @@ public:
     QTextBrowser *textBrowser;
     QPushButton *doAnalyze;
     QWidget *resultTab;
-    QTableView *tableView;
+    QTableWidget *tableWidget;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QToolBar *mainToolBar;
@@ -71,11 +71,9 @@ public:
         tabWidget->addTab(textTab, QString());
         resultTab = new QWidget();
         resultTab->setObjectName(QStringLiteral("resultTab"));
-        tableView = new QTableView(resultTab);
-        tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(10, 10, 571, 261));
-        tableView->setAlternatingRowColors(true);
-        tableView->setSortingEnabled(true);
+        tableWidget = new QTableWidget(resultTab);
+        tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        tableWidget->setGeometry(QRect(20, 20, 551, 251));
         tabWidget->addTab(resultTab, QString());
         TextAnalyzerClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TextAnalyzerClass);

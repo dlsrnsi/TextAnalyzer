@@ -61,20 +61,14 @@
      <attribute name="title">
       <string>결과</string>
      </attribute>
-     <widget class="QTableView" name="tableView">
+     <widget class="QTableWidget" name="tableWidget">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>571</width>
-        <height>261</height>
+        <x>20</x>
+        <y>20</y>
+        <width>551</width>
+        <height>251</height>
        </rect>
-      </property>
-      <property name="alternatingRowColors">
-       <bool>true</bool>
-      </property>
-      <property name="sortingEnabled">
-       <bool>true</bool>
       </property>
      </widget>
     </widget>
