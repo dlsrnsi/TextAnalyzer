@@ -68,6 +68,9 @@
     <ClCompile Include="src\analyze.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\morph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="textanalyzer.h">
@@ -85,6 +88,9 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="src\analyze.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

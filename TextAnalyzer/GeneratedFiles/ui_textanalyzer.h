@@ -63,7 +63,7 @@ public:
         textTab->setObjectName(QStringLiteral("textTab"));
         textBrowser = new QTextBrowser(textTab);
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(20, 10, 411, 471));
+        textBrowser->setGeometry(QRect(20, 10, 411, 441));
         doAnalyze = new QPushButton(textTab);
         doAnalyze->setObjectName(QStringLiteral("doAnalyze"));
         doAnalyze->setEnabled(true);

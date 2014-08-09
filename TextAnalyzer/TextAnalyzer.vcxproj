@@ -53,7 +53,7 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <OutputFile>Output\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -92,6 +92,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\analyze.cpp" />
     <ClCompile Include="src\err-code.cpp" />
+    <ClCompile Include="src\morph.cpp" />
     <ClCompile Include="src\out-ham.cpp" />
     <ClCompile Include="src\out-tok.cpp" />
     <ClCompile Include="src\readsent.cpp" />
@@ -124,6 +125,7 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_textanalyzer.h" />
     <ClInclude Include="src\analyze.h" />
+    <ClInclude Include="src\morph.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="textanalyzer.qrc">

@@ -5,6 +5,8 @@
 #include "qstring.h"
 #include "qtablewidget.h"
 #include <stdlib.h>
+#include <QList>
+#include "morph.h"
 using namespace std;
 
 
@@ -18,10 +20,11 @@ class Analyze
 	HAM_RUNMODE mode;
 	unsigned char sent[SENTSIZE];
 	HAM_PMORES hamout1;
-	QTableWidget *morphTableWidget;
+	QList<Morph> morphList;
 
 public :
-	Analyze(const char *fileName, QTableWidget &table);
+	QList<Morph> returnMorphList();
+	Analyze(const char *fileName);
 	void analyze();
 	void finish_Aanlyze();
 	void hamout_token(HAM_PMORES2 p, HAM_PRUNMODE hammode);
